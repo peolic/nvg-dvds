@@ -5,12 +5,23 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>NVG Network - DVDs</title>
 	<meta name="description" content="Mapping of NVG Network compilation DVDs (Net Video Girls, et al.) to the featured standalone scenes.">
-	<meta name="keywords" content="NVG Network, NVG, Net Video Girls, NetVideoGirls, Casting Couch HD, CCHD, Net Girl, NG, Adult, Porn">
+	<meta name="keywords" content="NVG Network, NVG, Net Video Girls, NetVideoGirls, Casting Couch HD, CCHD, Net Girl, NG, DVD, Adult, XXX, Porn">
 	<meta name="author" content="peolic">
 	<style type="text/css">
 	body {
 		margin: 0;
 		overflow: hidden;
+	}
+	.loading {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -1;
+		margin: 1em 0;
+		font-size: 3em;
+	}
+	.hide {
+		display: none;
 	}
 	iframe {
 		width: 100%;
@@ -19,6 +30,12 @@
 	</style>
 </head>
 <body>
+	<h1 class="loading">Loading&hellip;</h1>
 	<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQGT86Lc3ZmErp9-wgKNm2_OFslrZPHKU5SAWF-VV19XisnVuHEr3wZ2OYo60LF3N6qtxJnubxGqWgu/pubhtml?gid=1024815467&amp;single=true&amp;headers=false"></iframe>
+	<script>
+	document.querySelector('iframe').addEventListener('load', () => {
+		document.querySelector('.loading').classList.add('hide');
+	}, { once: true });
+	</script>
 </body>
 </html>
